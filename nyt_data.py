@@ -72,7 +72,8 @@ plt.xlabel("Date")
 plt.plot(data_by_date["cases"], "b", label="Confirmed cases")
 plt.plot(data_by_date["deaths"], "r", label="Deaths")
 plt.legend()
-plt.text(0.02, 0.90, source_txt, transform=ax1.transAxes,
+fig1.autofmt_xdate()
+plt.figtext(0.025, -0.25, source_txt, transform=ax1.transAxes,
     bbox={'facecolor': 'white', 'alpha': 0.8})
 fig1.savefig("nyt_cases_and_deaths.png")
 fig1.savefig("nyt_cases_and_deaths.pdf")
@@ -112,7 +113,7 @@ plt.xlabel("Cases {}".format(denominator_string))
 plt.ylabel("Deaths {}".format(denominator_string))
 plt.xlim(0, 1.1*max(denominator*data2["Cases_per_capita"]))
 plt.ylim(0, 1.1*max(denominator*data2["Deaths_per_capita"]))
-plt.text(0.02, 0.90,
+plt.text(0.02, 0.85,
     source_txt2,
     transform=ax2.transAxes,
     bbox={'facecolor': 'white', 'alpha': 0.8})
@@ -177,7 +178,7 @@ for state in state_list:
     newfig = plt.figure(figsize=(12, 8))
     ax = newfig.add_subplot(111)
     # Only use log scale when number of cases > 50
-    if max(cur_data["cases"]) > 50: 
+    if max(cur_data["cases"]) > 50:
         plt.yscale('log')
         ax.yaxis.set_major_formatter(fmt)
         plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
