@@ -171,12 +171,16 @@ for state in state_list:
     cur_data = data[data["state"] == state]
     newfig = plt.figure(figsize=(12, 8))
     ax = newfig.add_subplot(111)
-    plt.yscale('log')
-    ax.yaxis.set_major_formatter(fmt)
-    plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
+    if max(cur_data["cases"]) > 50:
+        plt.yscale('log')
+        ax.yaxis.set_major_formatter(fmt)
+        plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
+        log_text = " (log scale)"
+    else:
+        log_text = ""
     plt.grid(True, which="both")
-    plt.title("{} COVID-19 confirmed cases and deaths (log scale)"
-        .format(state))
+    plt.title("{} COVID-19 confirmed cases and deaths"
+        .format(state) + log_text)
     plt.xlabel("Date")
     plt.plot(cur_data["date"], cur_data["cases"], "b", label="Confirmed cases")
     plt.plot(cur_data["date"], cur_data["deaths"], "r", label="Deaths")
