@@ -1,6 +1,8 @@
 # State plots
 
-The *New York Times* has been compiling COVID-19 data from various state health departments. They have published the data on GitHub, at: <https://github.com/nytimes/covid-19-data>
+The *New York Times* has been compiling COVID-19 data from various state
+health departments. They have published the data on GitHub, at:
+<https://github.com/nytimes/covid-19-data>
 
 Below are plots of this data for each U.S. state and
 territory in their dataset.
@@ -9,8 +11,11 @@ territory in their dataset.
 
 * I am **not** an epidemologist.
 
-* "Number of cases" is the number of **confirmed** cases. The *Times* gives the following description:
-> Confirmed cases are patients who test positive for the coronavirus. We consider a case confirmed when it is reported by a federal, state, territorial or local government agency.
+* "Number of cases" is the number of **confirmed** cases. The *Times* gives
+the following description:
+> Confirmed cases are patients who test positive for the coronavirus. We
+> consider a case confirmed when it is reported by a federal, state,
+> territorial or local government agency.
 
 ## Alabama
 

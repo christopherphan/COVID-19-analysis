@@ -80,8 +80,6 @@ fig1.savefig("nyt_cases_and_deaths.pdf")
 data_by_date.to_csv("nyt_total_us_cases_and_deaths.csv")
 
 # Import US Census data and merge
-#
-# The population data are from the U.S. Census: https://www2.census.gov/programs-surveys/popest/tables/2010-2019/state/totals/nst-est2019-01.xlsx
 
 col_names = ["state", "Census", "Estimates Base"]
 col_names.extend([str(j) + " population" for j in range(2010, 2020)])
@@ -94,7 +92,8 @@ state_pop_data["state"] = state_pop_data["state"].apply(
 data2 = pd.merge(data[data["date"] == last_date],
     state_pop_data[["state", "2019 population"]], on ="state")
 
-# Plot #2: Scatterplot showing the number of confirmed cases and deaths (per capita) in each state
+# Plot #2: Scatterplot showing the number of confirmed cases and deaths
+# (per capita) in each state
 
 data2["Cases_per_capita"] = data2["cases"]/data2["2019 population"]
 data2["Deaths_per_capita"] = data2["deaths"]/data2["2019 population"]
@@ -117,7 +116,8 @@ plt.text(0.02, 0.90,
     source_txt2,
     transform=ax2.transAxes,
     bbox={'facecolor': 'white', 'alpha': 0.8})
-plt.plot(denominator*data2["Cases_per_capita"], denominator*data2["Deaths_per_capita"], 'k.')
+plt.plot(denominator*data2["Cases_per_capita"],
+    denominator*data2["Deaths_per_capita"], 'k.')
 fig2.savefig("nyt_by_state.png")
 fig2.savefig("nyt_by_state.pdf")
 
@@ -153,7 +153,9 @@ state_list = sorted(list(set(data["state"])))
 
 state_readme_text = """# State plots
 
-The *New York Times* has been compiling COVID-19 data from various state health departments. They have published the data on GitHub, at: <https://github.com/nytimes/covid-19-data>
+The *New York Times* has been compiling COVID-19 data from various state
+health departments. They have published the data on GitHub, at:
+<https://github.com/nytimes/covid-19-data>
 
 Below are plots of this data for each U.S. state and
 territory in their dataset.
@@ -162,8 +164,11 @@ territory in their dataset.
 
 * I am **not** an epidemologist.
 
-* "Number of cases" is the number of **confirmed** cases. The *Times* gives the following description:
-> Confirmed cases are patients who test positive for the coronavirus. We consider a case confirmed when it is reported by a federal, state, territorial or local government agency.
+* "Number of cases" is the number of **confirmed** cases. The *Times* gives
+the following description:
+> Confirmed cases are patients who test positive for the coronavirus. We
+> consider a case confirmed when it is reported by a federal, state,
+> territorial or local government agency.
 
 """
 
@@ -171,7 +176,8 @@ for state in state_list:
     cur_data = data[data["state"] == state]
     newfig = plt.figure(figsize=(12, 8))
     ax = newfig.add_subplot(111)
-    if max(cur_data["cases"]) > 50:
+    # Only use log scale when number of cases > 50
+    if max(cur_data["cases"]) > 50: 
         plt.yscale('log')
         ax.yaxis.set_major_formatter(fmt)
         plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
