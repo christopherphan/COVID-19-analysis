@@ -85,7 +85,7 @@ data_by_date.to_csv("nyt_total_us_cases_and_deaths.csv")
 col_names = ["state", "Census", "Estimates Base"]
 col_names.extend([str(j) + " population" for j in range(2010, 2020)])
 state_pop_data = pd.read_excel("../nst-est2019-01.xlsx",
-    skiprows=range(0, 9), skip_footer=7,
+    skiprows=range(0, 8), skip_footer=7,
     names=col_names)
 state_pop_data["state"] = state_pop_data["state"].apply(
     lambda x: x[1:])
