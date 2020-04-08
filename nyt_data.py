@@ -200,7 +200,7 @@ for state in state_list:
         state_underscore))
     newfig.savefig("states/nyt_{}.pdf".format(
         state_underscore))
-    cur_data.to_csv("states/nyt_{}.csv".format(
+    cur_data[["date", "cases", "deaths"]].to_csv("states/nyt_{}.csv".format(
         state_underscore),
         index=False)
     plt.close()

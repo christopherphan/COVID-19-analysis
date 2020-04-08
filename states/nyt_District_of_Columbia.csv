@@ -1,32 +1,33 @@
-date,state,fips,cases,deaths
-2020-03-07,District of Columbia,11,1,0
-2020-03-08,District of Columbia,11,1,0
-2020-03-09,District of Columbia,11,4,0
-2020-03-10,District of Columbia,11,4,0
-2020-03-11,District of Columbia,11,10,0
-2020-03-12,District of Columbia,11,10,0
-2020-03-13,District of Columbia,11,10,0
-2020-03-14,District of Columbia,11,16,0
-2020-03-15,District of Columbia,11,17,0
-2020-03-16,District of Columbia,11,22,0
-2020-03-17,District of Columbia,11,31,0
-2020-03-18,District of Columbia,11,36,0
-2020-03-19,District of Columbia,11,68,0
-2020-03-20,District of Columbia,11,77,1
-2020-03-21,District of Columbia,11,98,1
-2020-03-22,District of Columbia,11,116,2
-2020-03-23,District of Columbia,11,138,2
-2020-03-24,District of Columbia,11,183,2
-2020-03-25,District of Columbia,11,231,3
-2020-03-26,District of Columbia,11,267,3
-2020-03-27,District of Columbia,11,304,4
-2020-03-28,District of Columbia,11,342,4
-2020-03-29,District of Columbia,11,342,4
-2020-03-30,District of Columbia,11,495,9
-2020-03-31,District of Columbia,11,495,9
-2020-04-01,District of Columbia,11,586,11
-2020-04-02,District of Columbia,11,653,12
-2020-04-03,District of Columbia,11,757,15
-2020-04-04,District of Columbia,11,902,21
-2020-04-05,District of Columbia,11,998,22
-2020-04-06,District of Columbia,11,1097,24
+date,cases,deaths
+2020-03-07,1,0
+2020-03-08,1,0
+2020-03-09,4,0
+2020-03-10,4,0
+2020-03-11,10,0
+2020-03-12,10,0
+2020-03-13,10,0
+2020-03-14,16,0
+2020-03-15,17,0
+2020-03-16,22,0
+2020-03-17,31,0
+2020-03-18,36,0
+2020-03-19,68,0
+2020-03-20,77,1
+2020-03-21,98,1
+2020-03-22,116,2
+2020-03-23,138,2
+2020-03-24,183,2
+2020-03-25,231,3
+2020-03-26,267,3
+2020-03-27,304,4
+2020-03-28,342,4
+2020-03-29,342,4
+2020-03-30,495,9
+2020-03-31,495,9
+2020-04-01,586,11
+2020-04-02,653,12
+2020-04-03,757,15
+2020-04-04,902,21
+2020-04-05,998,22
+2020-04-06,1097,24
+2020-04-07,1211,22
