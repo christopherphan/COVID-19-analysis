@@ -175,38 +175,42 @@ the following description:
 
 for state in state_list:
     cur_data = data[data["state"] == state]
-    newfig = plt.figure(figsize=(12, 8))
-    ax = newfig.add_subplot(111)
-    # Only use log scale when number of cases > 50
-    if max(cur_data["cases"]) > 50:
-        plt.yscale('log')
-        ax.yaxis.set_major_formatter(fmt)
-        plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
-        log_text = " (log scale)"
-    else:
-        log_text = ""
-    plt.grid(True, which="both")
-    plt.title("{} COVID-19 confirmed cases and deaths"
-        .format(state) + log_text)
-    plt.xlabel("Date")
-    plt.plot(cur_data["date"], cur_data["cases"], "b", label="Confirmed cases")
-    plt.plot(cur_data["date"], cur_data["deaths"], "r", label="Deaths")
-    plt.legend()
-    newfig.autofmt_xdate()
-    plt.figtext(0.025, -0.25, source_txt, transform=ax.transAxes,
-        bbox={'facecolor': 'white', 'alpha': 0.8})
-    state_underscore = state.replace(" ", "_")
-    newfig.savefig("states/nyt_{}.png".format(
-        state_underscore))
-    newfig.savefig("states/nyt_{}.pdf".format(
-        state_underscore))
-    cur_data[["date", "cases", "deaths"]].to_csv("states/nyt_{}.csv".format(
-        state_underscore),
-        index=False)
-    plt.close()
-    state_readme_text += "## {}\n\n".format(state)
-    state_readme_text += "![](nyt_{}.png)\n\n".format(
-        state_underscore)
+    if max(cur_data["cases"]) > 0:
+        newfig = plt.figure(figsize=(12, 8))
+        ax = newfig.add_subplot(111)
+        # Only use log scale when number of cases > 50
+        if max(cur_data["cases"]) > 50:
+            plt.yscale('log')
+            ax.yaxis.set_major_formatter(fmt)
+            plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
+            log_text = " (log scale)"
+        else:
+            log_text = ""
+        plt.grid(True, which="both")
+        plt.title("{} COVID-19 confirmed cases and deaths"
+            .format(state) + log_text)
+        plt.xlabel("Date")
+        plt.plot(cur_data["date"], cur_data["cases"], "b",
+            label="Confirmed cases")
+        plt.plot(cur_data["date"], cur_data["deaths"], "r",
+            label="Deaths")
+        plt.legend()
+        newfig.autofmt_xdate()
+        plt.figtext(0.025, -0.25, source_txt, transform=ax.transAxes,
+            bbox={'facecolor': 'white', 'alpha': 0.8})
+        state_underscore = state.replace(" ", "_")
+        newfig.savefig("states/nyt_{}.png".format(
+            state_underscore))
+        newfig.savefig("states/nyt_{}.pdf".format(
+            state_underscore))
+        cur_data[["date", "cases", "deaths"]].to_csv(
+            "states/nyt_{}.csv".format(
+            state_underscore),
+            index=False)
+        plt.close()
+        state_readme_text += "## {}\n\n".format(state)
+        state_readme_text += "![](nyt_{}.png)\n\n".format(
+            state_underscore)
 
 with open("states/README.md", "wt") as state_readme_file:
     state_readme_file.write(state_readme_text)
