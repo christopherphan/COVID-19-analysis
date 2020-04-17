@@ -37,7 +37,7 @@ The format of the *Times*' ``us-states.csv`` file is not friendly to plotting wi
 
 ## Running the script
 
-The main script is ``nyt_data.py``. To run this script, you will need to place the following in the parent folder:
+The main script is ``nyt_data.py``. This is a Python 3 script (to produce the output in this repo, I run it in Python 3.6). To run this script, you will need to place the following in the parent folder:
 
 * ``../nst-est2019-01.xlsx``: https://www2.census.gov/programs-surveys/popest/tables/2010-2019/state/totals/nst-est2019-01.xlsx
 * The repository ``../covid-19-data/``: a clone of the repository at https://github.com/nytimes/covid-19-data
@@ -52,7 +52,7 @@ The main script is ``nyt_data.py``. To run this script, you will need to place t
 
 * ``nyt_cases_transpose.csv``: Cases in each state by date (rows: states, columns: dates)
 
-* ``nyt_data.py``: Script to create the plots and files
+* ``nyt_data.py``: Python 3 script to create the plots and files
 
 * ``nyt_deaths.csv``: Deaths in each state by date (rows: dates, columns: states)
 
