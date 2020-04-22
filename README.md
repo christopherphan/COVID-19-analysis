@@ -21,6 +21,8 @@ On April 15 ([commit ``337827``](https://github.com/nytimes/covid-19-data/commit
 * "Number of cases" is the number of **confirmed** cases. The *Times* gives the following description:
 > Confirmed cases are patients who test positive for the coronavirus. We consider a case confirmed when it is reported by a federal, state, territorial or local government agency.
 
+* Please see [the README for the *Times*' repo](https://github.com/nytimes/covid-19-data/blob/master/README.md#methodology-and-definitions) for more information about the limitations of the underlying data.
+
 ## Number of confirmed cases and deaths in the U.S. over time
 
 ![](nyt_cases_and_deaths.png)
