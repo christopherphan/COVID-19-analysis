@@ -33,9 +33,16 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker
 import numpy as np
 
-roundup_next_pow_10 = lambda x: 10**(
-    int(np.log(x)/np.log(10)) + 1)
 
+def roundup_next(x):
+    """Given x, return next multiple of 10**floor(log_10(x))
+    e.g. roundup_next(15) = 20
+    """
+    str_x = str(int(np.ceil(x))) # Convert to string of cieling
+    first_digit = int(str_x[0])
+    new_first_digit = first_digit + 1
+    val = int(str(new_first_digit) + "0"*(len(str_x) - 1))
+    return val
 
 # Import *NYT* COVID-19 data
 
@@ -65,7 +72,7 @@ plt.yscale('log')
 fmt = matplotlib.ticker.FuncFormatter(
     lambda y, f: '{:,.0f}'.format(y))
 ax1.yaxis.set_major_formatter(fmt)
-plt.ylim(1, roundup_next_pow_10(max(data_by_date["cases"])))
+plt.ylim(1, roundup_next(max(data_by_date["cases"])))
 plt.grid(True, which="both")
 plt.title("U.S. COVID-19 confirmed cases and deaths (log scale)")
 plt.xlabel("Date")
@@ -182,7 +189,7 @@ for state in state_list:
         if max(cur_data["cases"]) > 50:
             plt.yscale('log')
             ax.yaxis.set_major_formatter(fmt)
-            plt.ylim(1, roundup_next_pow_10(max(cur_data["cases"])))
+            plt.ylim(1, roundup_next(max(cur_data["cases"])))
             log_text = " (log scale)"
         else:
             log_text = ""
