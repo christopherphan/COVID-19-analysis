@@ -35,10 +35,12 @@ import numpy as np
 
 
 def roundup_next(x):
-    """Given x, return next multiple of 10**floor(log_10(x))
+    """Given x >= 0, return next multiple of 10**floor(log_10(x))
     e.g. roundup_next(15) = 20
     """
     str_x = str(int(np.ceil(x))) # Convert to string of cieling
+    if x < 0:
+        raise ValueError('input {} is negative'.format(x))
     first_digit = int(str_x[0])
     new_first_digit = first_digit + 1
     val = int(str(new_first_digit) + "0"*(len(str_x) - 1))
