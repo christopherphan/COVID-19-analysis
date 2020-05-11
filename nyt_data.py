@@ -38,7 +38,7 @@ def roundup_next(x):
     """Given x >= 0, return next multiple of 10**floor(log_10(x))
     e.g. roundup_next(15) = 20
     """
-    str_x = str(int(np.ceil(x))) # Convert to string of cieling
+    str_x = str(int(np.ceil(x))) # Convert to string of ceiling
     if x < 0:
         raise ValueError('input {} is negative'.format(x))
     first_digit = int(str_x[0])
