@@ -48,7 +48,6 @@ def roundup_next(x):
 
 # Import *NYT* COVID-19 data
 
-
 ## The folder ../covid-19-data/ is a clone of the repository at
 ## https://github.com/nytimes/covid-19-data
 
@@ -113,7 +112,7 @@ source_txt2 = "Sources: - " + source_txt[9:] + """
 
 fig2 = plt.figure(2, figsize=(12, 8))
 ax2 = fig2.add_subplot(111)
-denominator = 100000
+denominator = 10000
 denominator_string = 'per {:,.0f}'.format(denominator)
 plt.grid(True, which="both")
 plt.title(
@@ -122,7 +121,7 @@ plt.xlabel("Cases {}".format(denominator_string))
 plt.ylabel("Deaths {}".format(denominator_string))
 plt.xlim(0, 1.1*max(denominator*data2["Cases_per_capita"]))
 plt.ylim(0, 1.1*max(denominator*data2["Deaths_per_capita"]))
-plt.text(0.02, 0.85,
+plt.text(0.6, 0.85,
     source_txt2,
     transform=ax2.transAxes,
     bbox={'facecolor': 'white', 'alpha': 0.8})
