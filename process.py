@@ -119,30 +119,26 @@ if __name__ == "__main__":
 
     # Import US Census data and merge
 
-    col_names = ["state", "Census", "Estimates Base"]
-    col_names.extend([str(j) + " population" for j in range(2010, 2020)])
-    state_pop_data = pd.read_excel(
-        config_data["CensusData"], skiprows=range(0, 8), skipfooter=7, names=col_names
-    )
-    state_pop_data["state"] = state_pop_data["state"].apply(lambda x: x[1:])
+    col_names = ["state", "population", "blank"]
+    state_pop_data = pd.read_csv(config_data["CensusData"], names=col_names)
 
     data2 = pd.merge(
         data[data["date"] == last_date],
-        state_pop_data[["state", "2019 population"]],
+        state_pop_data[["state", "population"]],
         on="state",
     )
 
     # Plot #2: Scatterplot showing the number of confirmed cases and deaths
     # (per capita) in each state
 
-    data2["Cases_per_capita"] = data2["cases"] / data2["2019 population"]
-    data2["Deaths_per_capita"] = data2["deaths"] / data2["2019 population"]
+    data2["Cases_per_capita"] = data2["cases"] / data2["population"]
+    data2["Deaths_per_capita"] = data2["deaths"] / data2["population"]
 
     source_txt2 = (
         "Sources: - "
         + source_txt[9:]
         + """
-    - US Census (Population estimate for July 1, 2019)"""
+    - 2020 US Census"""
     )
 
     fig2 = plt.figure(2, figsize=(12, 8))
@@ -241,8 +237,8 @@ if __name__ == "__main__":
                 bbox={"facecolor": "white", "alpha": 0.8},
             )
             state_underscore = state.replace(" ", "_")
-            newfig.savefig("states/nyt_{}.png".format(state_underscore))
-            newfig.savefig("states/nyt_{}.pdf".format(state_underscore))
+            newfig.savefig("plots/nyt_{}.png".format(state_underscore))
+            newfig.savefig("plots/nyt_{}.pdf".format(state_underscore))
             cur_data[["date", "cases", "deaths"]].to_csv(
                 "csv/nyt_{}.csv".format(state_underscore), index=False
             )

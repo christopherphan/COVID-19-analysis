@@ -1,239 +1,243 @@
 # State plots
 
-The *New York Times* has been compiling COVID-19 data from various state
-health departments. They have published the data on GitHub, at:
-<https://github.com/nytimes/covid-19-data>
+    The *New York Times* has been compiling COVID-19 data from various state
+    health departments. They have published the data on GitHub, at:
+    <https://github.com/nytimes/covid-19-data>
 
-Below are plots of this data for each U.S. state and
-territory in their dataset.
+    Below are plots of this data for each U.S. state and
+    territory in their dataset.
 
-## Important disclaimers:
+    ## Important disclaimers:
 
-* I am **not** an epidemologist.
+    * I am **not** an epidemologist.
 
-* "Number of cases" is the number of **confirmed** cases. The *Times* gives
-the following description:
-> Confirmed cases are patients who test positive for the coronavirus. We
-> consider a case confirmed when it is reported by a federal, state,
-> territorial or local government agency.
+    * "Number of cases" is the number of **confirmed** cases. The *Times* gives
+    the following description:
+    > Confirmed cases are patients who test positive for the coronavirus. We
+    > consider a case confirmed when it is reported by a federal, state,
+    > territorial or local government agency.
 
-## Alabama
+    ## Alabama
 
-![](nyt_Alabama.png)
+![](plots/nyt_Alabama.png)
 
 ## Alaska
 
-![](nyt_Alaska.png)
+![](plots/nyt_Alaska.png)
+
+## American Samoa
+
+![](plots/nyt_American_Samoa.png)
 
 ## Arizona
 
-![](nyt_Arizona.png)
+![](plots/nyt_Arizona.png)
 
 ## Arkansas
 
-![](nyt_Arkansas.png)
+![](plots/nyt_Arkansas.png)
 
 ## California
 
-![](nyt_California.png)
+![](plots/nyt_California.png)
 
 ## Colorado
 
-![](nyt_Colorado.png)
+![](plots/nyt_Colorado.png)
 
 ## Connecticut
 
-![](nyt_Connecticut.png)
+![](plots/nyt_Connecticut.png)
 
 ## Delaware
 
-![](nyt_Delaware.png)
+![](plots/nyt_Delaware.png)
 
 ## District of Columbia
 
-![](nyt_District_of_Columbia.png)
+![](plots/nyt_District_of_Columbia.png)
 
 ## Florida
 
-![](nyt_Florida.png)
+![](plots/nyt_Florida.png)
 
 ## Georgia
 
-![](nyt_Georgia.png)
+![](plots/nyt_Georgia.png)
 
 ## Guam
 
-![](nyt_Guam.png)
+![](plots/nyt_Guam.png)
 
 ## Hawaii
 
-![](nyt_Hawaii.png)
+![](plots/nyt_Hawaii.png)
 
 ## Idaho
 
-![](nyt_Idaho.png)
+![](plots/nyt_Idaho.png)
 
 ## Illinois
 
-![](nyt_Illinois.png)
+![](plots/nyt_Illinois.png)
 
 ## Indiana
 
-![](nyt_Indiana.png)
+![](plots/nyt_Indiana.png)
 
 ## Iowa
 
-![](nyt_Iowa.png)
+![](plots/nyt_Iowa.png)
 
 ## Kansas
 
-![](nyt_Kansas.png)
+![](plots/nyt_Kansas.png)
 
 ## Kentucky
 
-![](nyt_Kentucky.png)
+![](plots/nyt_Kentucky.png)
 
 ## Louisiana
 
-![](nyt_Louisiana.png)
+![](plots/nyt_Louisiana.png)
 
 ## Maine
 
-![](nyt_Maine.png)
+![](plots/nyt_Maine.png)
 
 ## Maryland
 
-![](nyt_Maryland.png)
+![](plots/nyt_Maryland.png)
 
 ## Massachusetts
 
-![](nyt_Massachusetts.png)
+![](plots/nyt_Massachusetts.png)
 
 ## Michigan
 
-![](nyt_Michigan.png)
+![](plots/nyt_Michigan.png)
 
 ## Minnesota
 
-![](nyt_Minnesota.png)
+![](plots/nyt_Minnesota.png)
 
 ## Mississippi
 
-![](nyt_Mississippi.png)
+![](plots/nyt_Mississippi.png)
 
 ## Missouri
 
-![](nyt_Missouri.png)
+![](plots/nyt_Missouri.png)
 
 ## Montana
 
-![](nyt_Montana.png)
+![](plots/nyt_Montana.png)
 
 ## Nebraska
 
-![](nyt_Nebraska.png)
+![](plots/nyt_Nebraska.png)
 
 ## Nevada
 
-![](nyt_Nevada.png)
+![](plots/nyt_Nevada.png)
 
 ## New Hampshire
 
-![](nyt_New_Hampshire.png)
+![](plots/nyt_New_Hampshire.png)
 
 ## New Jersey
 
-![](nyt_New_Jersey.png)
+![](plots/nyt_New_Jersey.png)
 
 ## New Mexico
 
-![](nyt_New_Mexico.png)
+![](plots/nyt_New_Mexico.png)
 
 ## New York
 
-![](nyt_New_York.png)
+![](plots/nyt_New_York.png)
 
 ## North Carolina
 
-![](nyt_North_Carolina.png)
+![](plots/nyt_North_Carolina.png)
 
 ## North Dakota
 
-![](nyt_North_Dakota.png)
+![](plots/nyt_North_Dakota.png)
 
 ## Northern Mariana Islands
 
-![](nyt_Northern_Mariana_Islands.png)
+![](plots/nyt_Northern_Mariana_Islands.png)
 
 ## Ohio
 
-![](nyt_Ohio.png)
+![](plots/nyt_Ohio.png)
 
 ## Oklahoma
 
-![](nyt_Oklahoma.png)
+![](plots/nyt_Oklahoma.png)
 
 ## Oregon
 
-![](nyt_Oregon.png)
+![](plots/nyt_Oregon.png)
 
 ## Pennsylvania
 
-![](nyt_Pennsylvania.png)
+![](plots/nyt_Pennsylvania.png)
 
 ## Puerto Rico
 
-![](nyt_Puerto_Rico.png)
+![](plots/nyt_Puerto_Rico.png)
 
 ## Rhode Island
 
-![](nyt_Rhode_Island.png)
+![](plots/nyt_Rhode_Island.png)
 
 ## South Carolina
 
-![](nyt_South_Carolina.png)
+![](plots/nyt_South_Carolina.png)
 
 ## South Dakota
 
-![](nyt_South_Dakota.png)
+![](plots/nyt_South_Dakota.png)
 
 ## Tennessee
 
-![](nyt_Tennessee.png)
+![](plots/nyt_Tennessee.png)
 
 ## Texas
 
-![](nyt_Texas.png)
+![](plots/nyt_Texas.png)
 
 ## Utah
 
-![](nyt_Utah.png)
+![](plots/nyt_Utah.png)
 
 ## Vermont
 
-![](nyt_Vermont.png)
+![](plots/nyt_Vermont.png)
 
 ## Virgin Islands
 
-![](nyt_Virgin_Islands.png)
+![](plots/nyt_Virgin_Islands.png)
 
 ## Virginia
 
-![](nyt_Virginia.png)
+![](plots/nyt_Virginia.png)
 
 ## Washington
 
-![](nyt_Washington.png)
+![](plots/nyt_Washington.png)
 
 ## West Virginia
 
-![](nyt_West_Virginia.png)
+![](plots/nyt_West_Virginia.png)
 
 ## Wisconsin
 
-![](nyt_Wisconsin.png)
+![](plots/nyt_Wisconsin.png)
 
 ## Wyoming
 
-![](nyt_Wyoming.png)
+![](plots/nyt_Wyoming.png)
 
